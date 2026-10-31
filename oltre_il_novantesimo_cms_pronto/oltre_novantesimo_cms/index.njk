@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+permalink: index.html
+---
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">NOTIZIE · ANALISI · PASSIONE</span>
+    <h2>Il calcio è molto più <em>del risultato.</em></h2>
+    <p>Storie, approfondimenti e curiosità per chi vive il pallone ogni giorno. Il racconto continua anche dopo il fischio finale.</p>
+    <a class="button" href="#ultimi-articoli">Leggi gli articoli</a>
+  </div>
+  <div class="hero-art"><div class="orb">90<span>’</span></div><span class="plus">+ RECUPERO</span></div>
+</section>
+<section class="section" id="ultimi-articoli">
+  <div class="section-heading"><div><span class="eyebrow">DA LEGGERE</span><h2>Ultimi articoli</h2></div><span class="section-note">Le storie oltre il risultato</span></div>
+  {% if collections.articles.length %}
+  <div class="article-grid">
+    {% for article in collections.articles %}
+    <article class="article-card">
+      <a class="article-image" href="{{ article.url }}">
+        {% if article.data.cover %}<img src="{{ article.data.cover }}" alt="">{% else %}<div class="image-placeholder"><span>OLTRE IL<br>NOVANTESIMO</span><b>90′</b></div>{% endif %}
+      </a>
+      <div class="article-content"><div class="meta">{{ article.data.category or "CALCIO" }} · {{ article.date }}</div><h3><a href="{{ article.url }}">{{ article.data.title }}</a></h3>
+      {% if article.data.description %}<p>{{ article.data.description }}</p>{% endif %}<a class="text-link" href="{{ article.url }}">Leggi l'articolo ↗</a></div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state"><span class="empty-ball">⚽</span><h3>Il primo fischio deve ancora arrivare.</h3><p>Gli articoli pubblicati dalla redazione appariranno qui automaticamente.</p></div>
+  {% endif %}
+</section>
+<section class="section categories">
+  <div class="section-heading"><div><span class="eyebrow">IL MONDO DEL PALLONE</span><h2>Le nostre sezioni</h2></div></div>
+  <div class="category-grid"><div class="category"><span class="cat-number">01</span><h3>Serie A</h3><p>Partite, protagonisti e storie del campionato italiano.</p></div><div class="category"><span class="cat-number">02</span><h3>Calciomercato</h3><p>Trattative e notizie, distinguendo fatti e indiscrezioni.</p></div><div class="category"><span class="cat-number">03</span><h3>Calcio internazionale</h3><p>Le grandi competizioni e le squadre di tutto il mondo.</p></div></div>
+</section>
+<section class="about" id="chi-siamo"><span class="eyebrow">CHI SIAMO</span><h2>Oltre il risultato, dentro il gioco.</h2><p>Oltre il Novantesimo è un progetto editoriale indipendente dedicato al calcio. Raccontiamo notizie, analisi e curiosità con un linguaggio semplice, dando valore alle fonti e distinguendo i fatti dalle opinioni.</p><strong>Redazione Oltre il Novantesimo</strong></section>
