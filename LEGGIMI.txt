@@ -1,0 +1,11 @@
+OLTRE IL NOVANTESIMO - SITO MODIFICABILE
+
+- index.html: homepage.
+- articolo-esempio.html: esempio di articolo.
+- style.css: grafica, colori e impaginazione.
+
+Per modificare: apri i file con un editor di testo e cambia i testi.
+Per aggiungere un articolo: duplica una scheda <article> nella homepage, crea una nuova pagina copiando articolo-esempio.html e collega la scheda al nuovo file.
+
+Per renderlo pubblico serve caricare la cartella su un servizio di hosting (ad esempio Netlify). Il file ZIP non crea da solo un indirizzo web.
+Il testo Juventus è dimostrativo: verifica sempre fatti, date e fonti prima di pubblicare.
