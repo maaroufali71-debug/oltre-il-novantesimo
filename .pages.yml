@@ -1,0 +1,46 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: articles
+    label: Articoli
+    type: collection
+    path: articoli
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [title, date, category]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+        required: true
+      - name: category
+        label: Categoria
+        type: select
+        options:
+          values:
+            - Serie A
+            - Juventus
+            - Champions League
+            - Calciomercato
+            - Nazionale
+            - Altre notizie
+      - name: cover
+        label: Immagine di copertina
+        type: image
+      - name: description
+        label: Breve descrizione
+        type: text
+      - name: body
+        label: Articolo
+        type: rich-text
+        required: true
