@@ -1,0 +1,5 @@
+# Ignore the old static homepage; the Eleventy homepage is index.njk
+index.html
+
+# Ignore the accidentally nested duplicate copy of the CMS site
+oltre_il_novantesimo_cms_pronto/**
