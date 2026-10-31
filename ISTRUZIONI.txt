@@ -1,0 +1,18 @@
+OLTRE IL NOVANTESIMO – SITO COLLEGATO A PAGES CMS
+
+Questo pacchetto trasforma il sito in un sito che legge automaticamente gli articoli Markdown creati da Pages CMS.
+
+IMPORTANTE: il pacchetto va caricato nel repository GitHub che hai già creato, sostituendo i vecchi file del sito. Non caricare la cartella contenitore: carica il CONTENUTO di questa cartella nella radice del repository.
+
+Dopo aver aggiornato GitHub:
+1. In Netlify apri il sito e collega il repository GitHub se non è già collegato (Add new project / Import an existing project).
+2. Build command: npm run build
+3. Publish directory: _site
+4. Deploy.
+5. Pages CMS deve continuare a usare lo stesso repository e branch main. La configurazione .pages.yml inclusa qui è allineata al sito.
+
+Per pubblicare in futuro:
+Pages CMS > Articoli > New > compila titolo, data, categoria, immagine, descrizione e testo > Save.
+Pages CMS salva il file nel repository; Netlify, se collegato a GitHub, ricostruisce il sito e pubblica l'articolo automaticamente.
+
+Non creare articoli di prova finché il nuovo sito non è stato pubblicato correttamente.
