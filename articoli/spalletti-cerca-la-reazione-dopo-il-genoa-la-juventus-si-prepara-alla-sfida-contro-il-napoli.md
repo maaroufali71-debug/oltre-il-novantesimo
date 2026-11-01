@@ -3,7 +3,7 @@ title: "Spalletti cerca la reazione: dopo il Genoa, la Juventus si prepara alla
   sfida contro il Napoli"
 date: 2026-10-31
 category: Juventus
-cover: /media/hfq8drxC7yVeUUZoJVAyhTYwGP4zeL0CcOiw5f8fFwbuXVvypXY06Kmx5uAACF9C2RGNISrBIHjpjXTI1YZ_Y7hGZgC8QBqX9oeh54jUT53PGonUhnryiWtwitWq1yW-vYdfCHGZ017-NSZHeSVRLyKrcmyehRuFm-hpS4SX1FrH_RdciL8NF6HYr7UcCVsl.jpeg
+cover: /media/00831489-6A26-4E01-AE70-4123F021C491.png
 description: >
   Dopo la sconfitta per 2-0 contro il Genoa, Luciano Spalletti chiede una
   reazione ai suoi giocatori. Alla vigilia della sfida contro il Napoli, il
