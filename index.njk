@@ -15,7 +15,7 @@ permalink: index.html
   <div class="section-heading"><div><span class="eyebrow">DA LEGGERE</span><h2>Ultimi articoli</h2></div><span class="section-note">Le storie oltre il risultato</span></div>
   {% if collections.articles.length %}
   <div class="article-grid">
-    {% for article in collections.articles %}
+{% for article in collections.articles | reverse %}
     <article class="article-card">
       <a class="article-image" href="{{ article.url }}">
         {% if article.data.cover %}<img src="{{ article.data.cover }}" alt="">{% else %}<div class="image-placeholder"><span>OLTRE IL<br>NOVANTESIMO</span><b>90′</b></div>{% endif %}
