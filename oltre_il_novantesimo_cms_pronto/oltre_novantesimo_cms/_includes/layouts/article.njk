@@ -1,4 +1,4 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="article-page"><a class="back-link" href="/#ultimi-articoli">← Torna agli articoli</a><div class="article-header"><span class="eyebrow">{{ category or "CALCIO" }} · {{ page.date }}</span><h1>{{ title }}</h1>{% if description %}<p class="article-lead">{{ description }}</p>{% endif %}</div>{% if cover %}<img class="article-cover" src="{{ cover }}" alt="">{% endif %}<div class="prose">{{ content | safe }}</div><p class="signature">Redazione Oltre il Novantesimo</p></article>
+<article class="article-page"><a class="back-link" href="/#ultimi-articoli">← Torna agli articoli</a><div class="article-header"><span class="eyebrow">{{ category or "CALCIO" }} · {{ page.date.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) }}}</span><h1>{{ title }}</h1>{% if description %}<p class="article-lead">{{ description }}</p>{% endif %}</div>{% if cover %}<img class="article-cover" src="{{ cover }}" alt="">{% endif %}<div class="prose">{{ content | safe }}</div><p class="signature">Redazione Oltre il Novantesimo</p></article>
