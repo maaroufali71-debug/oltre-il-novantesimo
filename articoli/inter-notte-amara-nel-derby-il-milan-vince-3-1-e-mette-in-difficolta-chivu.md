@@ -15,7 +15,7 @@ La squadra di Cristian Chivu parte male e paga soprattutto le difficoltà dei pr
 
 Il Milan colpisce subito
 
-La partita si sblocca già al 4’: Christian Pulisic porta avanti i rossoneri con un colpo di testa su assist di Diego Moreira.
+La partita si sblocca già al 4’:  Pulisic porta avanti i rossoneri con un colpo di testa su assist di Diego Moreira.
 
 Passano appena sei minuti e arriva anche il raddoppio. Al 10’ Adrien Rabiot trova la rete del 2-0, mettendo ulteriormente in difficoltà l’Inter.
 
