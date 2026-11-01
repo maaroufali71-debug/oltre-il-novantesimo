@@ -1,38 +1,34 @@
 ---
 layout: layouts/base.njk
 title: Contattaci
-permalink: contatti/index.html
+permalink: /contatti/index.html
 ---
 
-<section class="contact-section">
-  <h1>Contatta la redazione</h1>
-  <p>
-    Hai una domanda, una proposta o vuoi collaborare con
-    Oltre il Novantesimo? Scrivici!
-  </p>
+<section class="article-page">
+  <div class="article-header">
+    <span class="eyebrow">LA REDAZIONE</span>
+    <h1>Contattaci</h1>
+    <p class="article-lead">
+      Hai una domanda, una segnalazione o una proposta di collaborazione?
+      Scrivici: siamo pronti ad ascoltarti.
+    </p>
+  </div>
 
-  <form name="contatti" method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field">
-
-    <input type="hidden" name="form-name" value="contatti">
-
-    <p hidden>
-      <label>Non compilare: <input name="bot-field"></label>
+  <div class="prose">
+    <h2>Scrivi alla redazione</h2>
+    <p>
+      Per informazioni, suggerimenti, segnalazioni o collaborazioni
+      puoi contattarci via email.
     </p>
 
-    <label for="nome">Nome</label>
-    <input id="nome" type="text" name="nome" required>
+    <p>
+      <a href="mailto:Oltreilnovantesimoo90@gmail.com?subject=Contatto%20-%20Oltre%20il%20Novantesimo">
+        <strong>Oltreilnovantesimoo90@gmail.com</strong>
+      </a>
+    </p>
 
-    <label for="email">La tua email</label>
-    <input id="email" type="email" name="email" required>
+    <p>Ti risponderemo appena possibile.</p>
+  </div>
 
-    <label for="oggetto">Oggetto</label>
-    <input id="oggetto" type="text" name="oggetto" required>
-
-    <label for="messaggio">Messaggio</label>
-    <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
-
-    <button type="submit">Invia messaggio</button>
-  </form>
+  <p class="signature">Redazione Oltre il Novantesimo</p>
 </section>
