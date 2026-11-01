@@ -2,7 +2,6 @@
 title: "Inter, notte amara nel derby: il Milan vince 3-1 e mette in difficoltà Chivu"
 date: 2026-11-01
 category: Serie A
-cover: /media/WhatsApp Image 2026-11-01 at 01.03.01-2.jpeg
 description: Il Milan conquista il Derby della Madonnina con un netto 3-1.
   Pulisic, Rabiot e Moreira firmano il successo rossonero, mentre Bastoni segna
   per l’Inter. Per Chivu arriva la prima sconfitta in campionato.
