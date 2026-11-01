@@ -2,7 +2,7 @@
 title: "Roma vittoria netta contro L'Udinese "
 date: 2026-11-01
 category: Serie A
-cover: /media/Roma domina l’Udinese 5-2.png
+cover: /media/marco_pomella-stadium-2791693.jpg
 description: La Roma conquista una vittoria convincente in trasferta contro
   l'Udinese, imponendosi per 5-2. Una prestazione offensiva importante per la
   squadra di Gasperini, che porta a casa tre punti preziosi.
