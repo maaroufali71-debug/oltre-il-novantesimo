@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Contattaci
+permalink: contatti/index.html
+---
+
+<section class="contact-section">
+  <span class="eyebrow">RESTIAMO IN CONTATTO</span>
+  <h1>Contatta la redazione</h1>
+  <p>Hai una domanda, una proposta o vuoi collaborare con Oltre il Novantesimo? Compila il modulo: ti ricontatteremo appena possibile.</p>
+
+  <form action="https://formsubmit.co/maaroufali71@gmail.com" method="POST" class="contact-form">
+    <input type="hidden" name="_subject" value="Nuovo messaggio da Oltre il Novantesimo">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" name="Nome" placeholder="Come ti chiami?" required>
+
+    <label for="email">La tua email</label>
+    <input id="email" type="email" name="Email" placeholder="nome@esempio.it" required>
+
+    <label for="oggetto">Oggetto</label>
+    <input id="oggetto" type="text" name="Oggetto" placeholder="Di cosa vuoi parlarci?" required>
+
+    <label for="messaggio">Messaggio</label>
+    <textarea id="messaggio" name="Messaggio" rows="7" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+    <button class="button" type="submit">Invia messaggio</button>
+  </form>
+  <p class="contact-note">I dati inseriti saranno usati esclusivamente per rispondere alla tua richiesta.</p>
+</section>
