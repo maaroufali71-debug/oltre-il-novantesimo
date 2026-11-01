@@ -1,3 +1,37 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Oltre il Novantesimo: il calcio, raccontato oltre il risultato."><title>{% if title %}{{ title }} | {% endif %}Oltre il Novantesimo</title><link rel="stylesheet" href="/style.css"></head>
-<body><header class="site-header"><a class="brand" href="/"><img src="/media/logo.png" alt="Logo Oltre il Novantesimo"><span><strong>OLTRE IL NOVANTESIMO</strong><small>IL CALCIO, RACCONTATO OLTRE IL RISULTATO</small></span></a><nav><a href="/#ultimi-articoli">Articoli</a><a href="/#chi-siamo">La redazione</a><a href="/contatti/">Contattaci</a></nav></header><main>{{ content | safe }}</main><footer><div><strong>Oltre il Novantesimo.</strong><p>Il calcio, raccontato oltre il risultato.</p></div><small>© 2026 Oltre il Novantesimo · Redazione Oltre il Novantesimo</small></footer></body></html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Oltre il Novantesimo: il calcio, raccontato oltre il risultato.">
+  <title>{% if title %}{{ title }} | {% endif %}Oltre il Novantesimo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img src="/media/logo.png" alt="Logo Oltre il Novantesimo">
+      <span>
+        <strong>OLTRE IL NOVANTESIMO</strong>
+        <small>IL CALCIO, RACCONTATO OLTRE IL RISULTATO</small>
+      </span>
+    </a>
+    <nav>
+      <a href="/#ultimi-articoli">Articoli</a>
+      <a href="/#chi-siamo">La redazione</a>
+      <a href="/contatti/">Contattaci</a>
+    </nav>
+  </header>
+
+  <main>{{ content | safe }}</main>
+
+  <footer>
+    <div>
+      <strong>Oltre il Novantesimo.</strong>
+      <p>Il calcio, raccontato oltre il risultato.</p>
+      <a href="/privacy/">Privacy e Cookie Policy</a>
+    </div>
+    <small>©️ 2026 Oltre il Novantesimo · Redazione Oltre il Novantesimo</small>
+  </footer>
+</body>
+</html>
