@@ -12,7 +12,13 @@ permalink: index.html
   <div class="hero-art"><div class="orb">90<span>’</span></div><span class="plus">+ RECUPERO</span></div>
 </section>
 <section class="section" id="ultimi-articoli">
-  <div class="section-heading"><div><span class="eyebrow">DA LEGGERE</span><h2>Ultimi articoli</h2></div><span class="section-note">Le storie oltre il risultato</span></div>
+ <div class="section-heading">
+  <div>
+    <span class="eyebrow">DA LEGGERE</span>
+    <h2>Ultimi articoli</h2>
+  </div>
+  <a class="text-link" href="/articoli/">Tutti gli articoli →</a>
+</div>
   {% if collections.articles.length %}
   <div class="article-grid">
 {% for article in collections.articles | reverse %}
