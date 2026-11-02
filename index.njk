@@ -40,3 +40,72 @@ permalink: index.html
   <div class="category-grid"><div class="category"><span class="cat-number">01</span><h3>Serie A</h3><p>Partite, protagonisti e storie del campionato italiano.</p></div><div class="category"><span class="cat-number">02</span><h3>Calciomercato</h3><p>Trattative e notizie, distinguendo fatti e indiscrezioni.</p></div><div class="category"><span class="cat-number">03</span><h3>Calcio internazionale</h3><p>Le grandi competizioni e le squadre di tutto il mondo.</p></div></div>
 </section>
 <section class="about" id="chi-siamo"><span class="eyebrow">CHI SIAMO</span><h2>Oltre il risultato, dentro il gioco.</h2><p>Oltre il Novantesimo è un progetto editoriale indipendente dedicato al calcio. Raccontiamo notizie, analisi e curiosità con un linguaggio semplice, dando valore alle fonti e distinguendo i fatti dalle opinioni.</p><strong>Redazione Oltre il Novantesimo</strong></section>
+
+<section class="search-section">
+  <h2>Cerca nel sito</h2>
+  <input
+    type="search"
+    id="site-search"
+    placeholder="Cerca Juventus, Inter, Champions League..."
+    autocomplete="off"
+  >
+  <div id="search-results"></div>
+</section>
+
+<script>
+const articles = [
+  {% for article in collections.articles %}
+  {
+    title: {{ article.data.title | dump | safe }},
+    url: {{ article.url | dump | safe }},
+    category: {{ article.data.category | dump | safe }},
+    description: {{ article.data.description | dump | safe }},
+    content: {{ article.templateContent | striptags | dump | safe }}
+  },
+  {% endfor %}
+];
+
+const aliases = {
+  "juve": "juventus bianconeri",
+  "champions": "champions league",
+  "inter": "internazionale nerazzurri",
+  "milan": "rossoneri",
+  "roma": "as roma"
+};
+
+const input = document.getElementById("site-search");
+const results = document.getElementById("search-results");
+
+input.addEventListener("input", () => {
+  const query = input.value.trim().toLowerCase();
+  results.innerHTML = "";
+
+  if (query.length < 2) return;
+
+  const expanded = (query + " " + (aliases[query] || "")).toLowerCase();
+
+  const matches = articles.filter(article => {
+    const text = (
+      article.title + " " +
+      article.category + " " +
+      article.description + " " +
+      article.content
+    ).toLowerCase();
+
+    return expanded.split(" ").some(word => word && text.includes(word));
+  });
+
+  if (!matches.length) {
+    results.textContent = "Nessun articolo trovato.";
+    return;
+  }
+
+  matches.forEach(article => {
+    const link = document.createElement("a");
+    link.href = article.url;
+    link.className = "search-result";
+    link.textContent = article.title;
+    results.appendChild(link);
+  });
+});
+</script>
