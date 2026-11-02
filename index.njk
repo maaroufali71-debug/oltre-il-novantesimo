@@ -109,3 +109,54 @@ input.addEventListener("input", () => {
   });
 });
 </script>
+<style>
+.search-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  text-align: center;
+  background: #111;
+  border: 1px solid #b6ff00;
+  border-radius: 14px;
+}
+
+.search-section h2 {
+  color: #b6ff00;
+  margin-bottom: 20px;
+}
+
+#site-search {
+  width: 100%;
+  max-width: 650px;
+  padding: 16px;
+  border: 1px solid #b6ff00;
+  border-radius: 8px;
+  background: #202020;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+#search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-result {
+  display: block;
+  padding: 14px;
+  background: #202020;
+  color: white;
+  border-left: 3px solid #b6ff00;
+  border-radius: 6px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.search-result:hover {
+  background: #303030;
+  color: #b6ff00;
+}
+</style>
