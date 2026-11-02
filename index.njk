@@ -61,33 +61,49 @@ const articles = [
 ];
 
 const aliases = {
-  "juve": "juventus bianconeri",
-  "champions": "champions league",
-  "inter": "internazionale nerazzurri",
-  "milan": "rossoneri",
-  "roma": "as roma"
+  "juve": ["juventus", "bianconeri"],
+  "juventus": ["juve", "bianconeri"],
+  "psg": ["paris saint-germain", "paris saint germain"],
+  "ucl": ["champions league"],
+  "champions": ["champions league"],
+  "inter": ["internazionale", "nerazzurri"],
+  "milan": ["rossoneri"]
 };
+
+const normalizeSearch = value => value
+  .toString()
+  .toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .replace(/[^a-z0-9]+/g, " ")
+  .trim();
 
 const input = document.getElementById("site-search");
 const results = document.getElementById("search-results");
 
 input.addEventListener("input", () => {
-  const query = input.value.trim().toLowerCase();
+  const query = normalizeSearch(input.value);
   results.innerHTML = "";
 
   if (query.length < 2) return;
 
-  const expanded = (query + " " + (aliases[query] || "")).toLowerCase();
+  const words = query.split(/\s+/).filter(Boolean);
 
   const matches = articles.filter(article => {
-    const text = (
-      article.title + " " +
-      article.category + " " +
-      article.description + " " +
+    const text = " " + normalizeSearch([
+      article.title,
+      article.category,
+      article.description,
       article.content
-    ).toLowerCase();
+    ].join(" ")) + " ";
 
-    return expanded.split(" ").some(word => word && text.includes(word));
+    return words.every(word => {
+      const alternatives = [word, ...(aliases[word] || [])];
+
+      return alternatives.some(term =>
+        text.includes(" " + normalizeSearch(term) + " ")
+      );
+    });
   });
 
   if (!matches.length) {
