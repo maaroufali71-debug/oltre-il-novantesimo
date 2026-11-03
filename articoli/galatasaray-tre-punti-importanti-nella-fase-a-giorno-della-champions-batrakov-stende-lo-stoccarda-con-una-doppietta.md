@@ -3,6 +3,7 @@ title: "Galatasaray, tre punti importanti nella fase a giorno della champions:
   Batrakov stende lo Stoccarda con una doppietta "
 date: 2026-11-03
 category: Champions League
+cover: /media/WhatsApp Image 2026-11-03 at 21.20.40.jpeg
 description: "Il Galatasaray conquista una vittoria importante nella quarta
   giornata della Champions League. Davanti al proprio pubblico, la squadra turca
   supera lo Stoccarda per 2-0 grazie a una prestazione concreta e a un
